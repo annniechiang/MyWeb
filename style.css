@@ -1,0 +1,229 @@
+* {
+  box-sizing: border-box;
+  font-family: Microsoft JhengHei;
+}
+
+#nav {
+  /*border: 1px solid red;*/
+  background-color: #20B2AA;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;    /* 元素的層級，愈大的數字會放在愈上層，而視窗位於 0 的位置 */
+}
+
+#content {
+  /*border: 1px solid blue;*/
+  position: relative;
+  top: 74px;
+  padding: 15px;
+}
+
+#content > .container > div {
+  padding: 74px 0;
+}
+
+.container {
+  /*border: 1px solid #ccc;*/
+  width: 800px;
+  margin: 0 auto;
+}
+
+#about, #my-life, #contact-me {
+  /*border: 1px solid yellow;*/
+}
+
+hr.bar {
+  border: 2px solid #00AA88;
+  width: 80px;
+}
+
+.menu {
+  float: right;
+}
+
+.menu li {
+  display: inline-block;  /*Inline 的 width 會被內容本身大小控制；inline-block 則會讓排列方向改成水平，但盒子的 margin 與 padding 等屬性還是保留 block 的特色。*/
+
+  width: 150px;  /* 按鈕寬度 */
+  padding: 10px 0px;
+
+  border: 1px solid #fff;
+  border-radius: 8px;
+
+  list-style-type: none;  /* 把選單符號去掉 */
+  text-align: center;  /* 讓文字在按鈕正中間 */
+  background-color: #20B2AA;  /* 按鈕顏色 */
+  color: #fff;  /* 文字顏色 */
+}
+
+a {
+  display: block;  /* a 元素的 display 屬性需改為 block，超連結的有效範圍才能擴張到和 li 同樣的尺寸 */
+  color: #fff;
+  text-decoration: none;
+}
+
+li:hover  {  /* :hover 選擇器，會等到游標移過時，才觸發所定義的樣式 */
+  border: 1px solid #20B2AA;
+  background-color: #fff;
+}
+
+li:hover a {
+  color: #00AA88;  /* 游標移至按鈕時字會變成藍綠色 */
+  font-weight: 800;
+}
+
+h1 {
+  text-align: center;
+}
+
+#about h1 {
+  margin-bottom: 0;
+  text-align: left;
+}
+
+/* about me */
+
+#my-avatar {
+  /*border: 1px solid red;*/  /* 標示用，排版完記得拿掉 */
+  float: left;
+  margin-top: 10px;
+  margin-right: 20px;
+  padding-left: 30px;
+}
+
+#my-avatar img {
+  width: 200px;
+  height: 200px;
+  border-radius: 20px;
+  /*transform: rotate(90deg);*/
+}
+
+/* about > my-info */
+
+h3 {
+  margin: 0;
+}
+
+table {
+  font-size: 14px;
+  text-align: left;
+}
+
+th, td {
+  vertical-align: top;
+}
+
+td {
+  color: #666;
+  padding-left: 10px;
+}
+
+hr {
+  border: 0.5px solid #E6E6FA;
+}
+
+/* my life */
+
+.item {
+  position: relative;
+  max-width: 30%;
+
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.item img {
+  width: 100%;
+}
+
+#moomin {
+  transform: rotate(90deg);
+}
+
+.item-info {
+  background-color: rgba(255,255,255,.8);   /* 背景半透明 */
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  text-align: center;
+  padding: 25px 10px;
+
+  opacity: 0;  /* 將 .item-info 設為透明，此作法元素仍在網頁上，只是眼睛看不到 */
+}
+
+.item-info:hover {
+  opacity: 1;
+}
+
+/*---------------------------------------------------------
+
+.item-info {
+  ...
+  display: none; (此法 .item-info 沒有被 display 出來)
+}
+
+.item:hover .item-info {
+  display: block;
+}
+
+----------------------------------------------------------*/
+
+#my-life-gallery {
+  text-align: center;
+}
+
+/* contact-me */
+
+#contact-me {
+  /*border: 1px solid green;*/  /* 標示用，完成後刪除 */
+}
+
+form.contact-form {
+  /*border: 1px solid red;*/  /* 標示用，完成後刪除 */
+  width: 50%;
+  margin: 0 auto;
+}
+
+.form-row {
+  margin-bottom: 15px;
+}
+
+.form-row input, .form-row textarea {
+  border-radius: 3px;
+  width: 100%;
+  border: 1px solid #D6D9DC;
+  padding: 7px; /* 讓輸入的文字與邊框有距離 */
+}
+
+.form-row textarea {
+  resize: none;
+  height: 4em;
+}
+
+.form-row button {
+  border: none;
+  border-radius: 3px;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
+.form-row button[type="sumbit"] {
+  background-color: #5995DA;
+  color: #FFFFFF;
+}
+
+.form-row button:hover {
+  background-color: #76AEED;
+}
+
+.form-row button:active { /* a:active: 設定當連接被點擊時，該連接的樣式 */
+  background-color: #407FC7;
+}
