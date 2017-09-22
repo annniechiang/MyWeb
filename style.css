@@ -139,10 +139,6 @@ hr {
   width: 100%;
 }
 
-#moomin {
-  transform: rotate(90deg);
-}
-
 .item-info {
   background-color: rgba(255,255,255,.8);   /* 背景半透明 */
 
@@ -226,4 +222,92 @@ form.contact-form {
 
 .form-row button:active { /* a:active: 設定當連接被點擊時，該連接的樣式 */
   background-color: #407FC7;
+}
+
+/*
+  以上為原始 css code
+*/
+
+@media screen and (min-width: 1024px) {
+  .menu-button,
+  .menu-button-checkbox {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .container {
+    width: auto;
+  }
+
+  .menu-button {
+    float: right;
+    font-size: 25px;
+    line-height: 40px;
+    color: white;
+    background: transparent;
+    padding: 0 15px;
+    border: 0;
+  }
+  
+  .menu-button-checkbox {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 55px;
+    height: 40px;
+    opacity: 0;
+  }
+
+  .menu-button-checkbox:checked ~ .menu {
+    display: block;
+  }
+
+  .menu {
+    display: none;
+    margin-top: 0;
+    padding-left: 0;
+    position: fixed;
+    right: 0;
+    top: 40px;
+    width: 150px;
+    height: 100%;
+    background: #20B2AA;
+  }
+
+  .menu li {
+    border: 0;
+    border-radius: 0;
+  }
+
+  #my-avatar {
+    width: 100%;
+	padding-left: 0px;
+  }
+
+  #my-avatar img {
+    display: block;
+    margin: 15px auto;
+  }
+
+  #about h1, h3 {
+    text-align: center;
+  }
+  
+  #content {
+    top: 0px;
+  }
+
+  #content > .container > div {
+    padding: 40px 0;
+  }
+  
+  .item {
+    max-width: 100%;
+  }
+
+  form.contact-form {
+    width: 80%;
+  }
+
 }
